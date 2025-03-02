@@ -5,9 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Project</title>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
-    
+    <div class="page-container">
+        <div class="form-modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <form id ="book-form">
+                <label for="book-title">Book Title</label>
+                <input type="text" name="book-title" id="book-title">
+
+                <label for="book-author">Book Author</label>
+                <input type="text" name="book-author" id="book-author">
+
+                <label for="book-pages">No. of Pages</label>
+                <input type="number" name="book-pages" id="book-pages">
+
+                <label for="book-read">Book Read?</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="book-read" id="book-read-true" value="true">
+                        Completed
+                    </label>
+                    <label>
+                        <input type="radio" name="book-read" id="book-read-false" value="false">
+                        Not Completed
+                    </label>
+                </div>
+
+                <input class="form-submit-button" type="submit" value="Submit">
+            </form>
+        </div>
+        <div class="content-container">
+            <div class="button-container">
+                <button type="button" onclick="openModal()">Add New Book</button>
+            </div>
+            <div class="table-container">
+                <table class="book-table">
+                    <thead class="book-table-header">
+                        <tr>
+                            <th>#</th>
+                            <th>Book Title</th>
+                            <th>Book Author</th>
+                            <th>No. of Pages</th>
+                            <th>Book Completed</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="book-table-body">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
