@@ -246,3 +246,18 @@
 .delete-btn:hover {
     background: #c0392b;
 }
+
+.edit-btn {
+  background: #f8b400;  /* Orange color */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.edit-btn:hover {
+  background: #e09e00; /* Darker orange */
+}
