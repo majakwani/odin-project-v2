@@ -39,6 +39,7 @@ function displayBooks(){
             <td>${book.pages}</td>
             <td>${book.bookRead}</td>
             <td><button class="delete-btn" onclick="deleteBook(${index})" type="button">❌</button></td>
+            <td><button class="edit-btn" onclick="changeStatus(${index})" type="button">Change Status</button></td>
         </tr>`        
     });
 }
@@ -61,5 +62,10 @@ function closeModal(){
 
 function deleteBook(bookIndex){
     myLibrary.splice(bookIndex, 1);
+    displayBooks();
+}
+
+function changeStatus(index){
+    myLibrary[index].bookRead = myLibrary[index].bookRead == "Completed" ? "Not Completed" : "Completed";
     displayBooks();
 }
